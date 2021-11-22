@@ -13,7 +13,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -31,6 +30,38 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./src/posts/",
+      },
+      __key: "posts",
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            }
+          }
+        ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          "roboto mono",
+          "muli\:400,400i,700,700i",
+        ],
+        display: "swap",
+      }
     },
   ],
 };
