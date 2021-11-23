@@ -2,11 +2,11 @@
 
 A personal website to to host my resume, links to previous projects, and contact information.
 <br>
-  
-
 
 ## Inclusions
+
 ---
+
 - Gatsby
 - styled-components
 - MDX (markdown support)
