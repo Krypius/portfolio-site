@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-const breakpoints = (props) => props.theme.breakpoints;
+const tablet = (props) => props.theme.breakpoints.tablet;
+const mobile = (props) => props.theme.breakpoints.mobile;
 
 export const ContainerWrapper = styled.div`
   height: 100%;
@@ -14,12 +15,12 @@ export const ContainerWrapper = styled.div`
   grid-template-rows: 7.8rem 20rem 5rem auto;
   gap: 0 2rem;
 
-  @media ${breakpoints.tablet} {
+  @media ${tablet} {
     grid-template-columns: 2rem repeat(6, 1fr) 2rem;
     grid-gap: 0 1rem;
   }
 
-  @media ${breakpoints.mobile} {
+  @media ${mobile} {
     grid-template-columns: 2rem repeat(6, 1fr) 2rem;
     grid-gap: 0 1rem;
   }
