@@ -1,12 +1,13 @@
 import React from "react";
 import { ContainerWrapper } from "../elements";
-import { Nav } from "../components";
+import { Nav, Footer } from "../components";
 
 const Container = ({ children }) => {
   return (
     <ContainerWrapper>
       <Nav />
       {children}
+      <Footer />
     </ContainerWrapper>
   );
 };
